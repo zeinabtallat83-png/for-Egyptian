@@ -1,0 +1,268 @@
+
+*{
+  box-sizing: border-box;
+}
+body { 
+  background-color:white; 
+  margin:0; 
+  padding: 0; 
+  overflow-x: hidden; 
+  font-family: sans-serif;
+}
+img{
+  max-width: 100%;
+}
+/* الـ NAV */
+.home { 
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  width: 95%;
+  margin: 10px auto 20px auto;
+  min-height: 100px;
+  border: 3px solid rgb(184, 143, 8);
+  border-radius: 40px;
+  background-color: rgb(184, 143, 8);
+  padding: 10px;
+}
+.home1,.tour{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tour img
+{ width:80px;
+   height:80px;
+    object-fit: cover; 
+    border-radius: 10px;}
+.home button { 
+  padding: 10px 20px;
+  border-radius:40px;
+  background-color: wheat;
+  border: none;
+  cursor: pointer;
+}
+.home1 a
+{ text-decoration: none;
+   color: black;
+    font-weight: bold; }
+.home1 img
+{ height:35px;
+   width: 35px;
+    border-radius: 50%; 
+    background-color:wheat; }
+
+/* الباقي */
+.pry img
+ { height: 300px;
+   width: 100%;
+    object-fit: cover;
+   border-radius:15px;
+    margin-bottom: 30px;}
+.Ministry 
+{ width: 100%;
+  overflow: hidden;
+ white-space: nowrap;
+  position: relative;
+   color:rgb(240, 166, 98);
+    font-weight: bold;
+   animation:move 20s linear infinite; }
+@keyframes move
+ { 0% { transform: translateX(100%) } 
+ 100% { transform: translateX(-100%);} }
+
+p
+{ text-align: center;
+   font-size: 24px; 
+   font-weight: bold;
+   border: 4px solid rgb(184, 143, 8);
+   border-radius: 20%;
+    width: fit-content;
+   padding: 5px 20px;
+    margin: 20px auto 40px auto; 
+    background-color: wheat;
+  box-shadow: 5px 2px rgb(167, 127, 53); }
+
+h2,h5
+{ font-size: 18px;
+   font-family:Impact;
+    border: 2px solid rgb(184, 143, 8);
+  box-shadow:5px 2px rgb(184, 143, 8);
+ border-radius: 20px;
+   width:90%;
+   text-align: center;
+    margin: 10px auto;
+    background-color: white;
+     padding: 8px;}
+h3
+{ font-size: 16px; 
+  text-align: center;
+   margin: 10px auto; }
+h1
+{ font-size: 20px;
+   width: fit-content;
+    padding: 10px 20px;
+     text-align: center;
+      box-shadow: 2px 5px rgb(184, 143, 8);
+   margin: 10px auto;
+    border-radius: 20px; 
+    font-family:Impact;
+     background-color: rgb(252, 233, 233);}
+
+/* كل الكروت */
+.history, .museums, .beaches, .Religious, .city1, .city2, .city3, .servic1, .servic2, .about1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 95%;
+  margin: 0 auto 30px auto;
+}
+.history div, .museums div, .beaches div, .Religious div, .city1 div, .city2 div, .city3 div, .about1 div, .servic1 div {
+  display: flex;
+  flex-direction: column;
+  width: 220px; /* بدل 20% */
+  min-height: 450px;
+  border: 3px solid rgb(184, 143, 8);
+  border-radius:30px;
+  box-shadow: 2px 5px 3px rgb(167, 127, 53);
+  text-align: center;
+  background-color: rgb(231, 186, 102);
+  padding-bottom: 15px;
+  overflow: hidden;
+}
+.history img, .museums img, .beaches img, .Religious img, .city1 div img, .city2 div img, .city3 img {
+  height:180px;
+   width: 100%;
+   object-fit: cover;
+    border-radius: 20px 20px 0 0;
+     margin: 0;
+}
+.servic2 div,.event, .about2 
+{ width: 90%;
+ max-width: 600px;
+margin: 20px auto; 
+border-radius: 40px; 
+padding: 20px; 
+height: auto; 
+min-height: 250px; 
+display: flex; 
+justify-content: center; 
+align-items: center; 
+flex-direction: column; 
+border: 2px solid rgb(184, 143, 8);
+ box-shadow:5px 2px rgb(184, 143, 8);
+  background-color: rgb(231, 186, 102);
+   text-align: center; }
+
+.slider {
+   position: relative; 
+  width: 95%;
+   max-width: 700px; 
+   height: 400px; 
+   margin: 20px auto;
+    overflow: hidden;
+     border-radius: 15px; }
+.slider img
+ { width: 100%;
+   height: 100%;
+    object-fit: cover; }
+.arrow 
+{ position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   padding: 12px 16px;
+    border: none;
+     border-radius: 8px;
+      background: #0008;
+       color: white; 
+       font-size: 22px; 
+       cursor: pointer; }
+.prev { right: 15px; }
+ .next { left: 15px; }
+.dots 
+{ position: absolute;
+   bottom: 15px;
+   left: 0;
+    right: 0;
+   display: flex;
+    justify-content: center;
+     gap: 10px; }
+.dot
+ { width: 12px; 
+  height: 12px; 
+  border: none; 
+  border-radius: 50%;
+   background: #ffffffaa; 
+   cursor: pointer; }
+.dot.active 
+{ background: white; 
+  transform: scale(1.3); }
+video 
+{ width:95%;
+   max-width: 600px;
+   height: auto;
+   margin: 20px auto;
+   display: block; 
+   border-radius: 20px;
+    box-shadow: 2px 5px rgb(184, 143, 8); }
+/* ده المهم للفون */
+@media (max-width:768px)
+{
+  .home{ flex-direction: column;
+     height: auto;
+      gap: 15px; 
+      border-radius: 20px;}
+  .history div, .museums div, .beaches div
+  , .Religious div, .city1 div, .city2 div, .city3 div,
+   .about1 div, .servic1 div
+   { width: 90%; }
+  p{ font-size: 20px; width: 90%; }
+  .slider{ height: 260px;}
+  footer{ height: auto;}
+}
+footer
+{display: flex; 
+flex-direction: column;
+flex-wrap: wrap;
+background-color: rgb(165, 140, 72);
+height: 450px;
+width: 100%;
+text-align: center;
+justify-content:space-evenly;
+margin: auto;}
+.follow nav{
+  display: flex; 
+flex-direction:row;
+flex-wrap: wrap;
+font-size: 20px;
+justify-content:space-evenly;
+padding-top: 20px;
+margin: auto;}
+.call1 nav
+{  display: flex;
+flex-direction: column;
+text-decoration: none;
+font-size: 20px;
+text-align: center;
+padding-top: 20px;
+}
+.call1 img
+{height: 50px;
+width: 90px; 
+border-radius: 50px;
+margin-left: 15px;}
+.call1 nav a 
+{ text-decoration: none;
+color: black;}
+.follow img ,.adress img
+{ height: 50px;
+width: 40px; 
+border-radius: 50px;
+margin-left: 45px;}
+a img:hover
+{background-color:white;}
+  ul li
+{ list-style: none;}
